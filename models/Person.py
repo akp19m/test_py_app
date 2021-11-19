@@ -7,8 +7,8 @@ class Person(ABC):
         self.age = age
 
     @abstractmethod
-    def calcAge():
+    def calcAge(self):
         pass
     
-    def __repr__(self) -> str:
+    def __repr__(self):
         return f"{{name: {self.firstName} lastName: {self.lastName} age: {self.age}"
