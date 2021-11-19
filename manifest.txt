@@ -1,0 +1,44 @@
+1. il progetto a grandi linee
+# menu senza interfaccia grafica dove da la possibilità 
+# all'utente di poter creare leggere files di varie tipologie 
+# json csv bin ecc cdove
+# autenticazione
+
+2. Utente 
+- Classe per tipologia di file -> bad practice 
+- creiamo RIDONDANZA
+- GERARCHIA:
+
+							Persona 
+								|
+								|
+								/\
+							   /  \
+						studente  docente
+						matricola corsi sostenuti
+						es pass   stipendio
+						
+2. Utente -> diverse tipologie -> Gerarchia
+
+	utente -> (abstract) abc {(AndreA)}
+	
+	utente base (nome cognome e cd)
+	
+	utente base (read utenti base)
+	utente 2 -> (r -> base)
+	moder -> (read only / sospensione utenti)
+	Admin -> accesso a tutti file (r / write / rimozione utenti)
+
+3. Gestione File
+
+	diversi tipologie di file, read and write
+	
+	csv
+	txt
+	json
+	bin
+	
+4. Persistenza Utenti
+	login -> email password -> (serializzazione)
+	utente password -> no interfaccia grafica
+	
